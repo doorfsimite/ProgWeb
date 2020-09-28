@@ -1,0 +1,16 @@
+#p1{
+    margin: 10px 0;
+
+
+}
+
+#caixa{
+    background-color: lightgray;
+    border: 10px solid black;    
+    width: 370px;
+    padding: 0 50px 0 50px ;
+    border-top-right-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
