@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let jogadas = {1:'Papel',2:'Pedra',3:'Tesoura'};
+        
+        let jokenpo = {
+
+            texto: "Escolha sua jogada:\n"+
+                    "1 - Papel\n"+
+                    "2 - Pedra\n"+
+                    "3 - Tesoura\n",
+
+            jogar: () => Math.floor(1 + (Math.random()*3)),
+            vitoria(player1,player2){
+
+                if(player1 === 1){
+                    if(player2 === 1){
+                        return null;
+                    }
+                    if(player2 === 2){
+                        return true;
+                    }
+                    if(player2 === 3){
+                        return false;
+                    }
+                }
+
+                if(player1 === 2){
+                    if(player2 === 1){
+                        return false;
+                    }
+                    if(player2 === 2){
+                        return null;
+                    }
+                    if(player2 === 3){
+                        return true;
+                    }
+                }
+
+                if(player1 === 3){
+                    if(player2 === 1){
+                        return true;
+                    }
+                    if(player2 === 2){
+                        return false;
+                    }
+                    if(player2 === 3){
+                        return null;
+                    }
+                }
+            },
+            rodada(user) {
+                if(user === 1 || user === 2 ||user === 3 ){
+                    let computador = jokenpo.jogar();
+                    console.log('O computador jogou '+jogadas[computador]);
+                    if(jokenpo.vitoria(user,computador) == null){
+                        console.log('A rodada empatou');
+                        return null;
+                    }
+                    if(jokenpo.vitoria(user,computador) == true){
+                        console.log('Você ganhou!');
+                        return false;
+                    }
+                    if(jokenpo.vitoria(user,computador) == false){
+                        
+                        return true;
+                    }
+                }
+                return true;
+            }           
+        };
+        let defeat = false;
+        let pontuacao = 0;
+ 
+        while(!defeat){
+
+            console.log(jokenpo.texto);
+            defeat = jokenpo.rodada(parseInt(prompt()));
+            
+            pontuacao = defeat == false ? pontuacao + 1 : pontuacao;
+            defeat = defeat == null ? false : defeat;
+        }
+        console.log('Você perdeu! A sua pontuação foi de '+pontuacao.toString());
+    </script>
+    
+</body>
+</html>
