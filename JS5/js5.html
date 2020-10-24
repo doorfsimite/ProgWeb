@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto de computação</title>
+    <style>
+        #primeiro {
+            display: inline;
+        }
+
+        #raio {
+            display: inline;
+        }
+
+        button {
+            display: inline;
+        }
+
+        label {
+            display: block;
+        }
+
+        table {
+            text-align: right;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <table>
+        <tr>
+            <td>
+                <label id="primeiro">
+                    Informe o raio
+                    <input id="raio" type="text" name="raio" />
+                </label>
+
+            </td>
+            <td>
+                <button id="button">OK</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    Área do círculo
+                    <input id="area" type="text" name="area" />
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    Circunferência
+                    <input id="circunferencia" type="text" name="circunferencia" />
+                </label>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        let button = document.getElementById("button");
+
+        button.addEventListener("click", calcula, false);
+
+        function calcula() {
+            let raio = document.getElementById("raio");
+            console.log(raio.value);
+            if (Number(raio.value) > 0) {
+
+                let area = document.getElementById("area");
+                let circunferencia = document.getElementById("circunferencia");
+                circunferencia.value = (2 * Math.PI * raio.value).toFixed(2);
+                area.value =(Math.PI * raio.value * raio.value).toFixed(2);
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
