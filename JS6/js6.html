@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        input{
+            display: inline-block;
+            width: 50px;
+        }
+        p{
+            display: inline;
+        }
+        div{
+            display: inline-block;
+            background-color: red;
+            
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de barras</title>
+</head>
+<body>
+    <h1>Um gráfico de barras</h1>
+    <p>Informe a altura das baras:</p><input id="a"><input id="b"><input id="c"><input id="d"><input id="e">
+    <br>
+    <p>Informe a largura das barras: </p><input id="largura">
+    <br>
+    <br>
+    <button id="submit">Desenhar o gráfico</button>
+    <br>
+    <br>
+    <div id="divA"></div>
+    <div id="divB"></div>
+    <div id="divC"></div>
+    <div id="divD"></div>
+    <div id="divE"></div>
+    
+    <script>
+    let a = document.getElementById("a");
+    let b = document.getElementById("b");
+    let c = document.getElementById("c");
+    let d = document.getElementById("d");
+    let e = document.getElementById("e");
+
+    let divA = document.getElementById("divA");
+    let divB = document.getElementById("divB");
+    let divC = document.getElementById("divC");
+    let divD = document.getElementById("divD");
+    let divE = document.getElementById("divE");
+
+    let largura = document.getElementById("largura");
+    let button = document.getElementById("submit");
+
+    button.addEventListener("click",function (){
+        console.log(a.value);
+        divA.style.setProperty("height",a.value+"px");
+        divB.style.setProperty("height",b.value+"px");
+        divC.style.setProperty("height",c.value+"px");
+        divD.style.setProperty("height",d.value+"px");
+        divE.style.setProperty("height",e.value+"px");
+
+        divA.style.setProperty("width",largura.value+"px");
+        divB.style.setProperty("width",largura.value+"px");
+        divC.style.setProperty("width",largura.value+"px");
+        divD.style.setProperty("width",largura.value+"px");
+        divE.style.setProperty("width",largura.value+"px");
+    });
+    </script>
+    
+</body>
+</html>
