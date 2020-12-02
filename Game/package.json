@@ -10,9 +10,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "bootstrap": "^4.5.3",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
+    "jquery": "^3.5.1",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.6"
+    "node-sass-middleware": "^0.11.0",
+    "nodemon": "^2.0.6",
+    "popper.js": "^1.16.1",
+    "scss": "^0.2.4"
   }
 }
