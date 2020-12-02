@@ -7,4 +7,12 @@ function sobre (req, res) {
 function index (req, res) {
     res.render('main/index');
 }
-module.exports = {sobre , index}
+
+function ui (req, res) {
+    res.render('main/ui');
+}
+
+function jogo (req, res) {
+    res.render('main/jogo');
+}
+module.exports = {sobre , index, ui, jogo}

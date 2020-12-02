@@ -1,0 +1,72 @@
+body{
+  text-align: center;
+}
+
+.reserva {
+  background-image: url('../img/reserva.png');
+  z-index: 1;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  /* transform: scale(0.5);
+  transform: translate(); */
+}
+
+.foco-incendio {
+  background-image: url('../img/foco.gif');
+  position: absolute;
+  background-size: cover;
+  z-index: 3;
+  
+}
+
+.header{
+  display: block;
+  height: 60;  
+  justify-content: space-between;
+
+}
+.placar{
+display: inline-flex;
+
+justify-content: space-between;
+}
+
+.arvores-div{
+  display: inline;
+}
+.arvore{
+  vertical-align: bottom;
+  background-size: contain;
+  background-image: url('../img/arvore.png');
+  display: inline-block;
+  height: 27px;
+  width: 50px;
+}
+
+.destruicao{
+  position: absolute;
+  z-index: 2;
+  background-image: url('../img/devastacao.png');
+  background-size: contain;
+}
+
+.caixa-de-mensagem{
+  position: absolute;
+  z-index: 4;
+}
+.mensagem{
+  position: absolute;
+
+}
+
+.pontuacao{
+  display: inline;}
+
+.caveira{
+  position: absolute;
+background-image: url('../img/caveira.gif');  
+background-size: cover;
+z-index: 3;
+}
