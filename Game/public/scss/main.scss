@@ -2,3 +2,9 @@
 @import "./variables.scss";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "bootswatch.scss";
+
+#logo{
+    background-image: url('../img/foco.gif');
+    background-size: cover;
+    background-position: bottom;
+}
