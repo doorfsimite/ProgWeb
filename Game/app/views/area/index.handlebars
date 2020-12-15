@@ -1,0 +1,11 @@
+<h1> Áreas da Ciências</h1>
+<ul>
+    {{#each areas}}
+    <li>{{nome}}</li>
+    {{/each}}
+    <form action=" /curso/create" method="post">
+        <input type="text" name="sigla">
+        <input type="text" name="nome">
+        <input type="submit" value="Enviar">
+    </form>
+</ul>

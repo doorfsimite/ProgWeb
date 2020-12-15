@@ -1,0 +1,18 @@
+<br>
+<div class="row">
+   
+
+        {{#each cursos}}
+        <div class="card border-dark mb-3" style="max-width: 20rem;">
+            <div class="card-header">{{nome}}</div>
+            <div class="card-body">
+                <p><strong>Sigla: </strong>{{sigla}}</p>
+                <p><strong>Nome: </strong>{{nome}}</p>
+                <p><strong>Descrição: </strong>{{descricao}}</p>
+                <p><strong>Área: </strong>{{Area.nome}}</p>
+            </div>
+        </div>
+        <div style="width: 10px;"></div>
+        {{/each}}
+    
+</div>

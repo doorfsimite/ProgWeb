@@ -13,9 +13,10 @@ const app = express();
 var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
 app.use(logger("combined",{ stream: accessLogStream }));
 
-
 // Handlebars
-app.engine("handlebars", handlebars());
+app.engine("handlebars", handlebars({
+    helpers: require(__dirname +'/app/views/helpers/helpers.js')
+}));
 app.set("view engine", "handlebars");
 app.set("views", `${__dirname}/app/views`);
 
@@ -39,6 +40,8 @@ app.use("/js",[
     express.static(__dirname + '/node_modules/bootstrap/dist/js'),
 
 ]);
+
+app.use(express.urlencoded({extended:false}));
 
 // Chamada das rotas
 app.use(router);

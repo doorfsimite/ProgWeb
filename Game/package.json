@@ -16,9 +16,12 @@
     "express-handlebars": "^5.2.0",
     "jquery": "^3.5.1",
     "morgan": "^1.10.0",
+    "mysql2": "^2.2.5",
     "node-sass-middleware": "^0.11.0",
     "nodemon": "^2.0.6",
     "popper.js": "^1.16.1",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "sequelize": "^6.3.5",
+    "sequelize-cli": "^6.2.0"
   }
 }

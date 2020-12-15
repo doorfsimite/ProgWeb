@@ -1,0 +1,24 @@
+<br>
+<h1>Cursos</h1>
+<br>
+
+<ul>
+    <a href="/curso/create">
+        <h3>Adicionar curso</h3>
+    </a>
+  <br>
+    <div>
+        <h3>Buscar cursos</h3>
+        {{#each cursos}}
+
+        <a href="curso/read/{{id}}"><button type="button" class="btn btn-outline-primary">{{nome}}</button></a>
+        {{/each}}
+
+    </div>
+ <br>
+    <a href="/cursos">
+        <h3>Listar cursos</h3>
+    </a>
+
+</ul>
+ <br>
